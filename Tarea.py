@@ -1,22 +1,26 @@
-def sumar(a, b):
-    return a + b
+def sumar(a, b): return a + b
+def restar(a, b): return a - b
+def multiplicar(a, b): return a * b
+def dividir(a, b): return a / b if b != 0 else "No se puede dividir por cero"
 
-def restar(a, b):
-    return a - b
+print("CALCULADORA BÁSICA")
+print("1. Sumar")
+print("2. Restar")
+print("3. Multiplicar")
+print("4. Dividir")
 
-def multiplicar(a, b):
-    return a * b
-
-def dividir(a, b):
-    if b != 0:
-        return a / b
-    else:
-        return "No se puede dividir por cero"
-
+opcion = input("Seleccione una operación (1-4): ")
 a = int(input("Ingrese el primer número: "))
 b = int(input("Ingrese el segundo número: "))
 
-print("Suma:", sumar(a, b))
-print("Resta:", restar(a, b))
-print("Multiplicación:", multiplicar(a, b))
-print("División:", dividir(a, b))
+if opcion == "1":
+    print("Resultado:", sumar(a, b))
+elif opcion == "2":
+    print("Resultado:", restar(a, b))
+elif opcion == "3":
+    print("Resultado:", multiplicar(a, b))
+elif opcion == "4":
+    print("Resultado:", dividir(a, b))
+else:
+    print("Opción inválida.")
+
